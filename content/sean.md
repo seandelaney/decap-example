@@ -1,9 +1,8 @@
 ---
-title: "Sean"
+title: Sean
 eleventyNavigation:
-  key: "Sean"
+  key: Sean
   order: 3
-description:
-body:
+description: Test page
 ---
-<h1>{{ title }}</h1>
+Sean
