@@ -1,9 +1,8 @@
 ---
-title: "About"
+title: About
 eleventyNavigation:
-  key: "About"
-  order: 4
-description:
-body:
+  key: About
+  order: -11
+description: This is the about page.
 ---
-<h1>{{ title }}</h1>
+This page describes who we are and what we do.
