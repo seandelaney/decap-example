@@ -17,7 +17,7 @@ collections:
       slug: "{{slug}}"
       fields:
         - { label: "Title", name: "title", widget: "string" }
-        - { label: "Slug", name: "slug", widget: "string", pattern: ["^[a-z0-9-]+$", "Lowercase letters, numbers, and hyphens only"], required: true }
+        - { label: "Slug", name: "slug", widget: "string", required: true }
         - { label: "Description", name: "description", widget: "string" }
         - { label: "Body", name: "body", widget: "markdown", editor_components: [] }
         - label: "Navigation"
