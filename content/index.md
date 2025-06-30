@@ -3,13 +3,14 @@ title: Home
 eleventyNavigation:
   key: Home
   order: 1
-description: Home
+description: This is the homepage.
 numberOfLatestPostsToShow: 4
 ---
-HOme
+Welcome to our demo project.
 
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
+
 <h2>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h2>
 
 {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
@@ -18,5 +19,6 @@ HOme
 
 {% set morePosts = postsCount - numberOfLatestPostsToShow %}
 {% if morePosts > 0 %}
+
 <p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="blog.njk">the blog</a>.</p>
 {% endif %}
