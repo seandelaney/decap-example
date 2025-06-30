@@ -1,0 +1,83 @@
+backend:
+  name: github
+  repo: seandelaney/decap-example
+  branch: main
+
+media_folder: "content/assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+    - label: "Home"
+      name: "home"
+      file: "content/index.njk"
+      fields:
+        - { label: "Title", name: "title", widget: "string" }
+        - label: "Navigation"
+          name: "eleventyNavigation"
+          widget: "object"
+          fields:
+            - { label: "Key", name: "key", widget: "string" }
+            - { label: "Order", name: "order", widget: "number" }
+        - { label: "Description", name: "description", widget: "string" }
+        - { label: "Body", name: "body", widget: "markdown" }
+        - { label: "Number of Latest Posts", name: "numberOfLatestPostsToShow", widget: "number" }
+    - label: "Sean"
+      name: "sean"
+      file: "content/sean.md"
+      fields:
+        - { label: "Title", name: "title", widget: "string" }
+        - label: "Navigation"
+          name: "eleventyNavigation"
+          widget: "object"
+          fields:
+            - { label: "Key", name: "key", widget: "string" }
+            - { label: "Order", name: "order", widget: "number" }
+        - { label: "Description", name: "description", widget: "string" }
+        - { label: "Body", name: "body", widget: "markdown" }
+    - label: "About"
+      name: "about"
+      file: "content/about.md"
+      fields:
+        - { label: "Title", name: "title", widget: "string" }
+        - label: "Navigation"
+          name: "eleventyNavigation"
+          widget: "object"
+          fields:
+            - { label: "Key", name: "key", widget: "string" }
+            - { label: "Order", name: "order", widget: "number" }
+        - { label: "Description", name: "description", widget: "string" }
+        - { label: "Body", name: "body", widget: "markdown" }
+    - label: "Solspace"
+      name: "solspace"
+      file: "content/solspace/solspace.md"
+      fields:
+        - { label: "Title", name: "title", widget: "string" }
+        - label: "Navigation"
+          name: "eleventyNavigation"
+          widget: "object"
+          fields:
+            - { label: "Key", name: "key", widget: "string" }
+            - { label: "Order", name: "order", widget: "number" }
+        - { label: "Description", name: "description", widget: "string" }
+        - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} - {{date}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - label: "Navigation"
+        name: "eleventyNavigation"
+        widget: "object"
+        fields:
+          - { label: "Key", name: "key", widget: "string" }
+          - { label: "Order", name: "order", widget: "number" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
