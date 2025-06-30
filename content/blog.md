@@ -1,9 +1,10 @@
 ---
 title: Blog
+slug: /blog
+description: This is the blog page.
 eleventyNavigation:
   key: Blog
   order: 3
-description: This is the blog page.
 ---
 Here is a list of recent articles.
 
