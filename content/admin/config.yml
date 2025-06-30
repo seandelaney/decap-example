@@ -23,7 +23,7 @@ collections:
             - { label: "Key", name: "key", widget: "string" }
             - { label: "Order", name: "order", widget: "number" }
         - { label: "Description", name: "description", widget: "string" }
-        - { label: "Body", name: "body", widget: "markdown" }
+        - { label: "Body", name: "body", widget: "markdown", editor_components: [] }
         - { label: "Number of Latest Posts", name: "numberOfLatestPostsToShow", widget: "number" }
     - label: "About"
       name: "about"
@@ -37,7 +37,7 @@ collections:
             - { label: "Key", name: "key", widget: "string" }
             - { label: "Order", name: "order", widget: "number" }
         - { label: "Description", name: "description", widget: "string" }
-        - { label: "Body", name: "body", widget: "markdown" }
+        - { label: "Body", name: "body", widget: "markdown", editor_components: [] }
     - label: "Blog"
       name: "blog"
       file: "content/blog.md"
@@ -50,7 +50,7 @@ collections:
             - { label: "Key", name: "key", widget: "string" }
             - { label: "Order", name: "order", widget: "number" }
         - { label: "Description", name: "description", widget: "string" }
-        - { label: "Body", name: "body", widget: "markdown" }
+        - { label: "Body", name: "body", widget: "markdown", editor_components: [] }
   - name: "blogPosts"
     label: "Blog Posts"
     folder: "content/blog"
@@ -66,4 +66,4 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Body", name: "body", widget: "markdown", editor_components: [] }
