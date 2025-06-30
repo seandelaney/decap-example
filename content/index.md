@@ -1,4 +1,5 @@
 ---
+lang: en
 title: Home
 slug: /
 description: This is the homepage.
