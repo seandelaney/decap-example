@@ -13,7 +13,7 @@ collections:
     files:
     - label: "Home"
       name: "home"
-      file: "content/pages/index.md"
+      file: "content/index.md"
       slug: "{{slug}}"
       fields:
         - { label: "Title", name: "title", widget: "string" }
@@ -28,7 +28,7 @@ collections:
             - { label: "Order", name: "order", widget: "number" }
     - label: "About"
       name: "about"
-      file: "content/pages/about.md"
+      file: "content/about.md"
       slug: "{{slug}}"
       fields:
         - { label: "Title", name: "title", widget: "string" }
@@ -43,7 +43,7 @@ collections:
             - { label: "Order", name: "order", widget: "number" }
     - label: "Blog"
       name: "blog"
-      file: "content/pages/blog.md"
+      file: "content/blog.md"
       slug: "{{slug}}"
       fields:
         - { label: "Title", name: "title", widget: "string" }
