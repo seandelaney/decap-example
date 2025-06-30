@@ -1,11 +1,16 @@
 ---
-lang: en
-title: Home
-slug: /
-description: This is the homepage.
-numberOfLatestPostsToShow: 4
+title:
+	en: ""
+	id: ""
+slug: ""
+description:
+	en: ""
+	id: ""
+body:
+	en: ""
+	id: ""
 eleventyNavigation:
-  key: Home
-  order: 1
+	key: ""
+	order:
 ---
 Welcome to our demo project.
