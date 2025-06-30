@@ -16,61 +16,99 @@ collections:
       file: "content/index.md"
       slug: "{{slug}}"
       fields:
-        - label: "Language"
-          name: "lang"
-          widget: "select"
-          options: [ "en", "fr" ]
-          default: "en"
-        - { label: "Title", name: "title", widget: "string" }
-        - { label: "Slug", name: "slug", widget: "string", required: true }
-        - { label: "Description", name: "description", widget: "string" }
-        - { label: "Body", name: "body", widget: "markdown", editor_components: [] }
+        - label: "Title"
+          name: "title"
+          widget: "object"
+          fields:
+            - { label: "English", name: "en", widget: "string" }
+            - { label: "Bahasa Indonesia", name: "id", widget: "string" }
+        - label: "Slug"
+          name: "slug"
+          widget: "string"
+          required: true
+        - label: "Description"
+          name: "description"
+          widget: "object"
+          fields:
+            - { label: "English", name: "en", widget: "string" }
+            - { label: "Bahasa Indonesia", name: "id", widget: "string" }
+        - label: "Body"
+          name: "body"
+          widget: "object"
+          fields:
+            - { label: "English", name: "en", widget: "markdown" }
+            - { label: "Bahasa Indonesia", name: "id", widget: "markdown" }
+          editor_components: []
         - label: "Navigation"
           name: "eleventyNavigation"
           widget: "object"
           fields:
-            - { label: "Key", name: "key", widget: "string" }
-            - { label: "Order", name: "order", widget: "number" }
+            - label: "Key"
+              name: "key"
+              widget: "string"
+            - label: "Order"
+              name: "order"
+              widget: "number"
     - label: "About"
       name: "about"
       file: "content/about.md"
       slug: "{{slug}}"
       fields:
-        - label: "Language"
-          name: "lang"
-          widget: "select"
-          options: [ "en", "fr" ]
-          default: "en"
-        - { label: "Title", name: "title", widget: "string" }
-        - { label: "Slug", name: "slug", widget: "string", pattern: ["^[a-z0-9-]+$", "Lowercase letters, numbers, and hyphens only"], required: true }
-        - { label: "Description", name: "description", widget: "string" }
-        - { label: "Body", name: "body", widget: "markdown", editor_components: [] }
+        - label: "Title"
+          name: "title"
+          widget: "string"
+        - label: "Slug"
+          name: "slug"
+          widget: "string"
+          pattern: ["^[a-z0-9-]+$", "Lowercase letters, numbers, and hyphens only"]
+          required: true
+        - label: "Description"
+          name: "description"
+          widget: "string"
+        - label: "Body"
+          name: "body"
+          widget: "markdown"
+          editor_components: []
         - label: "Navigation"
           name: "eleventyNavigation"
           widget: "object"
           fields:
-            - { label: "Key", name: "key", widget: "string" }
-            - { label: "Order", name: "order", widget: "number" }
+            - label: "Key"
+              name: "key"
+              widget: "string"
+            - label: "Order"
+              name: "order"
+              widget: "number"
     - label: "Blog"
       name: "blog"
       file: "content/blog.md"
       slug: "{{slug}}"
       fields:
-        - label: "Language"
-          name: "lang"
-          widget: "select"
-          options: [ "en", "fr" ]
-          default: "en"
-        - { label: "Title", name: "title", widget: "string" }
-        - { label: "Slug", name: "slug", widget: "string", pattern: ["^[a-z0-9-]+$", "Lowercase letters, numbers, and hyphens only"], required: true }
-        - { label: "Description", name: "description", widget: "string" }
-        - { label: "Body", name: "body", widget: "markdown", editor_components: [] }
+        - label: "Title"
+          name: "title"
+          widget: "string"
+        - label: "Slug"
+          name: "slug"
+          widget: "string"
+          pattern: ["^[a-z0-9-]+$", "Lowercase letters, numbers, and hyphens only"]
+          required: true
+        - label: "Description"
+          name: "description"
+          widget: "string"
+        - label: "Body"
+          name: "body"
+          widget: "markdown"
+          editor_components: []
         - label: "Navigation"
           name: "eleventyNavigation"
           widget: "object"
           fields:
-            - { label: "Key", name: "key", widget: "string" }
-            - { label: "Order", name: "order", widget: "number" }
+            - label: "Key"
+              name: "key"
+              widget: "string"
+            - label: "Order"
+              name: "order"
+              widget: "number"
   - name: "blogPosts"
     label: "Blog Posts"
     folder: "content/blog"
@@ -81,16 +119,43 @@ collections:
     #    - { label: "Language", name: "language" }
     create: true
     slug: "{{slug}}"
-    summary: "{{title}} {{date}}"
+    summary: "{{title.en}} / {{title.id}}"
     fields:
-      - label: "Language"
-        name: "lang"
-        widget: "select"
-        options: [ "en", "fr" ]
-        default: "en"
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Slug", name: "slug", widget: "string", pattern: ["^[a-z0-9-]+$", "Lowercase letters, numbers, and hyphens only"], required: true }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown", editor_components: [] }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-
+      - label: "Title"
+        name: "title"
+        widget: "object"
+        fields:
+          - label: "English"
+            name: "en"
+            widget: "string"
+          - label: "Bahasa Indonesia"
+            name: "id"
+            widget: "string"
+      - label: "Slug"
+        name: "slug"
+        widget: "string"
+        required: true
+        pattern: [ "^[a-z0-9-]+$", "Lowercase letters, numbers, and hyphens only" ]
+      - label: "Description"
+        name: "description"
+        widget: "object"
+        fields:
+          - label: "English"
+            name: "en"
+            widget: "string"
+          - label: "Bahasa Indonesia"
+            name: "id"
+            widget: "string"
+      - label: "Body"
+        name: "body"
+        widget: "object"
+        fields:
+          - label: "English"
+            name: "en"
+            widget: "markdown"
+          - label: "Bahasa Indonesia"
+            name: "id"
+            widget: "markdown"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
