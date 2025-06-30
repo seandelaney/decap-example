@@ -1,14 +1,12 @@
 ---
-title: "Home"
+title: Home
 eleventyNavigation:
-  key: "Home"
+  key: Home
   order: 1
-description:
-body:
-numberOfLatestPostsToShow: 3
+description: Home
+numberOfLatestPostsToShow: 4
 ---
-
-<h1>{{ title }}</h1>
+HOme
 
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
@@ -20,5 +18,5 @@ numberOfLatestPostsToShow: 3
 
 {% set morePosts = postsCount - numberOfLatestPostsToShow %}
 {% if morePosts > 0 %}
-	<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="blog.njk">the blog</a>.</p>
+<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="blog.njk">the blog</a>.</p>
 {% endif %}
