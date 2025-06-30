@@ -9,6 +9,7 @@ public_folder: "/assets/images/uploads"
 collections:
   - name: "pages"
     label: "Pages"
+    create: true
     files:
     - label: "Home"
       name: "home"
@@ -24,35 +25,9 @@ collections:
         - { label: "Description", name: "description", widget: "string" }
         - { label: "Body", name: "body", widget: "markdown" }
         - { label: "Number of Latest Posts", name: "numberOfLatestPostsToShow", widget: "number" }
-    - label: "Sean"
-      name: "sean"
-      file: "content/sean.md"
-      fields:
-        - { label: "Title", name: "title", widget: "string" }
-        - label: "Navigation"
-          name: "eleventyNavigation"
-          widget: "object"
-          fields:
-            - { label: "Key", name: "key", widget: "string" }
-            - { label: "Order", name: "order", widget: "number" }
-        - { label: "Description", name: "description", widget: "string" }
-        - { label: "Body", name: "body", widget: "markdown" }
     - label: "About"
       name: "about"
       file: "content/about.md"
-      fields:
-        - { label: "Title", name: "title", widget: "string" }
-        - label: "Navigation"
-          name: "eleventyNavigation"
-          widget: "object"
-          fields:
-            - { label: "Key", name: "key", widget: "string" }
-            - { label: "Order", name: "order", widget: "number" }
-        - { label: "Description", name: "description", widget: "string" }
-        - { label: "Body", name: "body", widget: "markdown" }
-    - label: "Solspace"
-      name: "solspace"
-      file: "content/solspace/solspace.md"
       fields:
         - { label: "Title", name: "title", widget: "string" }
         - label: "Navigation"
@@ -79,9 +54,14 @@ collections:
   - name: "blogPosts"
     label: "Blog Posts"
     folder: "content/blog"
+    #filter:
+    #  field: language
+    #  value: en
+    #  fields:
+    #    - { label: "Language", name: "language" }
     create: true
     slug: "{{slug}}"
-    summary: "{{title}} - {{date}}"
+    summary: "{{title}} {{date}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
