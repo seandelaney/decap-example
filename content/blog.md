@@ -2,7 +2,7 @@
 title: Blog
 eleventyNavigation:
   key: Blog
-  order: 2
+  order: 3
 description: This is the blog page.
 ---
 Here is a list of recent articles.
