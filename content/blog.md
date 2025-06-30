@@ -1,6 +1,6 @@
 ---
 title: Blog
-slug: blog
+slug: /blog
 description: This is the blog page.
 eleventyNavigation:
   key: Blog
