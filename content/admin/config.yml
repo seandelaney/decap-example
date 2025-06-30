@@ -16,6 +16,11 @@ collections:
       file: "content/index.md"
       slug: "{{slug}}"
       fields:
+        - label: "Language"
+          name: "lang"
+          widget: "select"
+          options: [ "en", "fr" ]
+          default: "en"
         - { label: "Title", name: "title", widget: "string" }
         - { label: "Slug", name: "slug", widget: "string", required: true }
         - { label: "Description", name: "description", widget: "string" }
@@ -31,6 +36,11 @@ collections:
       file: "content/about.md"
       slug: "{{slug}}"
       fields:
+        - label: "Language"
+          name: "lang"
+          widget: "select"
+          options: [ "en", "fr" ]
+          default: "en"
         - { label: "Title", name: "title", widget: "string" }
         - { label: "Slug", name: "slug", widget: "string", pattern: ["^[a-z0-9-]+$", "Lowercase letters, numbers, and hyphens only"], required: true }
         - { label: "Description", name: "description", widget: "string" }
@@ -46,6 +56,11 @@ collections:
       file: "content/blog.md"
       slug: "{{slug}}"
       fields:
+        - label: "Language"
+          name: "lang"
+          widget: "select"
+          options: [ "en", "fr" ]
+          default: "en"
         - { label: "Title", name: "title", widget: "string" }
         - { label: "Slug", name: "slug", widget: "string", pattern: ["^[a-z0-9-]+$", "Lowercase letters, numbers, and hyphens only"], required: true }
         - { label: "Description", name: "description", widget: "string" }
@@ -68,6 +83,11 @@ collections:
     slug: "{{slug}}"
     summary: "{{title}} {{date}}"
     fields:
+      - label: "Language"
+        name: "lang"
+        widget: "select"
+        options: [ "en", "fr" ]
+        default: "en"
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string", pattern: ["^[a-z0-9-]+$", "Lowercase letters, numbers, and hyphens only"], required: true }
       - { label: "Description", name: "description", widget: "string" }
