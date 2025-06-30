@@ -20,8 +20,12 @@ collections:
           name: "title"
           widget: "object"
           fields:
-            - { label: "English", name: "en", widget: "string" }
-            - { label: "Bahasa Indonesia", name: "id", widget: "string" }
+            - label: "English"
+              name: "en"
+              widget: "string"
+            - label: "Bahasa Indonesia"
+              name: "id"
+              widget: "string"
         - label: "Slug"
           name: "slug"
           widget: "string"
@@ -30,15 +34,24 @@ collections:
           name: "description"
           widget: "object"
           fields:
-            - { label: "English", name: "en", widget: "string" }
-            - { label: "Bahasa Indonesia", name: "id", widget: "string" }
+            - label: "English"
+              name: "en"
+              widget: "string"
+            - label: "Bahasa Indonesia"
+              name: "id"
+              widget: "string"
         - label: "Body"
           name: "body"
           widget: "object"
           fields:
-            - { label: "English", name: "en", widget: "markdown" }
-            - { label: "Bahasa Indonesia", name: "id", widget: "markdown" }
-          editor_components: []
+            - label: "English"
+              name: "en"
+              widget: "markdown"
+              editor_components: []
+            - label: "Bahasa Indonesia"
+              name: "id"
+              widget: "markdown"
+              editor_components: []
         - label: "Navigation"
           name: "eleventyNavigation"
           widget: "object"
@@ -112,11 +125,6 @@ collections:
   - name: "blogPosts"
     label: "Blog Posts"
     folder: "content/blog"
-    #filter:
-    #  field: language
-    #  value: en
-    #  fields:
-    #    - { label: "Language", name: "language" }
     create: true
     slug: "{{slug}}"
     summary: "{{title.en}} / {{title.id}}"
