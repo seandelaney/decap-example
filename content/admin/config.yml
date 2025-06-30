@@ -12,7 +12,7 @@ collections:
     files:
     - label: "Home"
       name: "home"
-      file: "content/index.njk"
+      file: "content/index.md"
       fields:
         - { label: "Title", name: "title", widget: "string" }
         - label: "Navigation"
@@ -63,21 +63,27 @@ collections:
             - { label: "Order", name: "order", widget: "number" }
         - { label: "Description", name: "description", widget: "string" }
         - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "blog"
-    label: "Blog"
+    - label: "Blog"
+      name: "blog"
+      file: "content/blog.md"
+      fields:
+        - { label: "Title", name: "title", widget: "string" }
+        - label: "Navigation"
+          name: "eleventyNavigation"
+          widget: "object"
+          fields:
+            - { label: "Key", name: "key", widget: "string" }
+            - { label: "Order", name: "order", widget: "number" }
+        - { label: "Description", name: "description", widget: "string" }
+        - { label: "Body", name: "body", widget: "markdown" }
+  - name: "blogPosts"
+    label: "Blog Posts"
     folder: "content/blog"
     create: true
     slug: "{{slug}}"
     summary: "{{title}} - {{date}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - label: "Navigation"
-        name: "eleventyNavigation"
-        widget: "object"
-        fields:
-          - { label: "Key", name: "key", widget: "string" }
-          - { label: "Order", name: "order", widget: "number" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
